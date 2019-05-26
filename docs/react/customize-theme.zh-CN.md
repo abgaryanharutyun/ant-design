@@ -3,7 +3,7 @@ order: 5
 title: 定制主题
 ---
 
-Ant Design 设计规范上支持一定程度的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于主色、圆角、边框和部分组件的视觉定制。
+Ant Design 设计规范和技术上支持灵活的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于全局样式（主色、圆角、边框）和指定组件的视觉定制。
 
 ![一些配置好的主题](https://zos.alipayobjects.com/rmsportal/zTFoszBtDODhXfLAazfSpYbSLSEeytoG.png)
 
@@ -56,7 +56,7 @@ module.exports = {
 +         'link-color': '#1DA57A',
 +         'border-radius-base': '2px',
 +         // or
-+         'ant-theme-file': "~'your-less-file-path.less'", // Override with less file
++         'hack': `true; @import "your-less-file-path.less";`, // Override with less file
 +       },
 +       javascriptEnabled: true,
 +     },

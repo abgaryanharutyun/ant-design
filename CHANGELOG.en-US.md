@@ -15,6 +15,75 @@ timeline: true
 
 ---
 
+## 3.19.0
+
+`2019-05-26`
+
+- New Components:
+  - 🔥🔥🔥 [Mentions](https://ant.design/components/mentions-cn/) Provides Mentions component and origin Mention marked as deprecated.
+  - 🔥🔥🔥 [Descriptions](https://ant.design/components/descriptions-cn/) Display multiple read-only fields in groups.
+- 🇱🇻 Add Latvian localization support. [#16780](https://github.com/ant-design/ant-design/pull/16780) [@kirbo](https://github.com/kirbo)
+- 🌟 Drawer support close by press `ESC`. [#16694](https://github.com/ant-design/ant-design/pull/16694)
+- 🌟 Steps support click to switch. [#16773](https://github.com/ant-design/ant-design/pull/16773)
+- 🌟 Calendar support `headerRender` to customize header。[#16535](https://github.com/ant-design/ant-design/pull/16535) [@abgaryanharutyun](https://github.com/abgaryanharutyun)
+- 🌟 Slider support `tooltipPlacement` to set tooltip position. [#16641](https://github.com/ant-design/ant-design/pull/16641) [@cmaster11](https://github.com/cmaster11)
+- 🌟 Slider support `getTooltipPopupContainer` to customize tooltip container. [#16717](https://github.com/ant-design/ant-design/pull/16717)
+- 🐞 Fix PageHeader horizontal divider style. [#16684](https://github.com/ant-design/ant-design/pull/16684)
+- 🐞 Fix Carousel `initialSlide` not work when `children` count change. [#16756](https://github.com/ant-design/ant-design/pull/16756)
+- 🐞 Fix Cascader `displayRender` not interactive. [#16782](https://github.com/ant-design/ant-design/pull/16782)
+- 🐞 Fix Upload list still can be removed when `disabled`. [#16786](https://github.com/ant-design/ant-design/pull/16786)
+- 💄 Update Upload `disabled` cursor style. [#16799](https://github.com/ant-design/ant-design/pull/16799) [@attacking](https://github.com/attacking)
+- 💄 Correct Statistic font color. [#16801](https://github.com/ant-design/ant-design/pull/16801)
+- TypeScript
+  - ⚡️ Update Upload `action` prop definition. [#16716](https://github.com/ant-design/ant-design/pull/16716) [@christophehurpeau](https://github.com/christophehurpeau)
+  - ⚡️ Update Upload `onRemove` prop definition. [#16570](https://github.com/ant-design/ant-design/pull/16570) [@christophehurpeau](https://github.com/christophehurpeau)
+  - ⚡️ Update Select `getPopupContainer` prop definition. [#16778](https://github.com/ant-design/ant-design/pull/16778) [@chj-damon](https://github.com/chj-damon)
+  - ⚡️ Update InputNumber `parse` prop definition. [#16797](https://github.com/ant-design/ant-design/pull/16797)
+  - ⚡️ Remove useless props definition. [#16705](https://github.com/ant-design/ant-design/pull/16705) [@sirlantis](https://github.com/sirlantis)
+
+## 3.18.2
+
+`2019-05-20`
+
+- 🐞 Fix space missing for Button with mixed content. [#15342](https://github.com/ant-design/ant-design/issues/15342)
+- 🐞 Fix active status missing for Carousel when `children` is changed. [#16583](https://github.com/ant-design/ant-design/issues/16583)
+- 🐞 Fix panel not close when DatePicker is `blur` by upgrading `rc-calendar` requirement to version `9.13.3`. [#16588](https://github.com/ant-design/ant-design/issues/16588)
+- 🐞 Fix style disorder for Form.Item with `help` prop and `margin-bottom` is negative. [#16584](https://github.com/ant-design/ant-design/pull/16584) [@sbusch](https://github.com/sbusch)
+- 🐞 Fix Spin not align when set `font-size` style. [#15206](https://github.com/ant-design/ant-design/issues/15206)
+- 🐞 Fix `selectedRows` missing when there is `childrenColumnName` in Table. [#16614](https://github.com/ant-design/ant-design/issues/16614)
+- TypeScript
+  - ⚡️ Improve the definition of `children` prop for Breadcrumb. [#16550](https://github.com/ant-design/ant-design/pull/16550) [@Gin-X](https://github.com/Gin-X)
+  - ⚡️ Improve the definition of `onFieldsChange` params for Form. [#16577](https://github.com/ant-design/ant-design/pull/16577) [@SylvanasGone](https://github.com/SylvanasGone)
+  - ⚡️ Improve the definition of `dataSource` and `renderItem` for List. [#16587](https://github.com/ant-design/ant-design/issues/16587)
+  - ⚡️ Improve the definition of `onDragEnter` params for Tree. [#16638](https://github.com/ant-design/ant-design/pull/16638) [@eruca](https://github.com/eruca)
+  - ⚡️ Improve the definition of `event` for Tree。[#16624](https://github.com/ant-design/ant-design/pull/16624) [@ztplz](https://github.com/ztplz)
+
+## 3.18.1
+
+`2019-05-13`
+
+- 🐞 Remove useless `module.export` of package. [#antd-tools](https://github.com/ant-design/antd-tools/commit/b9e230c91551af5b4555f672130b14304ff58357)
+
+## 3.18.0
+
+`2019-05-12`
+
+- 🌟 Transfer support `children` prop to customize render list. [#16026](https://github.com/ant-design/ant-design/pull/16026)
+- 🌟 Pagination support `disabled` prop. [#16493](https://github.com/ant-design/ant-design/pull/16493)
+- 🌟 Upgrade `@ant-design/icons` and `@ant-design/icons-react` to 2.0 for fix lots of missing icons. [#15874](https://github.com/ant-design/ant-design/pull/15874)
+- 🐞 Fix Form `hasFeedback` overlap issue with Input.Password. [#16445](https://github.com/ant-design/ant-design/pull/16445)
+- 🐞 Fix Select selected and disabled item wrong hover color. [#16477](https://github.com/ant-design/ant-design/pull/16477)
+- 🐞 Fix disabled Upload being triggered by label. [#16483](https://github.com/ant-design/ant-design/pull/16483)
+- 🐞 Fix `hoist-non-react-statics` compilation error. [#16397](https://github.com/ant-design/ant-design/pull/16397) [@ztplz](https://github.com/ztplz)
+- 🐞 Fix customize icon style in Notification size not correct. [#16507](https://github.com/ant-design/ant-design/pull/16507)
+- 🐞 Fix PageHeader should not render blank dom when `title` is undefined. [#16510](https://github.com/ant-design/ant-design/pull/16510) [@yociduo](https://github.com/yociduo)
+- ⚡️ Print reject error when Modal's `onOk` callback return an promise rejects. [#16437](https://github.com/ant-design/ant-design/pull/16437) [@jas0ncn](https://github.com/jas0ncn)
+- TypeScript
+  - ⚡️ Improve Table column.filterDropdown type. [#16446](https://github.com/ant-design/ant-design/pull/16446)
+  - ⚡️ Add Select missing type definition `maxTagTextLength`. [#16504](https://github.com/ant-design/ant-design/pull/16504) [@SylvanasGone](https://github.com/SylvanasGone)
+  - ⚡️ Improve return type of `getFieldError` in Form. [#16524](https://github.com/ant-design/ant-design/pull/16524) [@vicrep](https://github.com/vicrep)
+  - 🐞 Fix List missing style prop definition. [#16485](https://github.com/ant-design/ant-design/pull/16485)
+
 ## 3.17.0
 
 `2019-05-05`

@@ -11,7 +11,7 @@ import { Omit } from '../_util/type';
 export interface Route {
   path: string;
   breadcrumbName: string;
-  children: Omit<Route, 'children'>[];
+  children?: Omit<Route, 'children'>[];
 }
 
 export interface BreadcrumbProps {
@@ -59,8 +59,6 @@ export default class Breadcrumb extends React.Component<BreadcrumbProps, any> {
     separator: PropTypes.node,
     routes: PropTypes.array,
     params: PropTypes.object,
-    linkRender: PropTypes.func,
-    nameRender: PropTypes.func,
   };
 
   componentDidMount() {
