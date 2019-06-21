@@ -14,10 +14,10 @@ title: Select
 
 ## API
 
-```html
-<select>
-  <option value="lucy">lucy</option>
-</select>
+```jsx
+<Select>
+  <Select.Option value="lucy">lucy</Select.Option>
+</Select>
 ```
 
 ### Select props

@@ -1,11 +1,11 @@
 import * as React from 'react';
+import classnames from 'classnames';
+
 import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
 import Icon from '../icon';
-import classnames from 'classnames';
-import { BreadcrumbProps } from '../breadcrumb';
 import Divider from '../divider';
 import Tag from '../tag';
-import Breadcrumb from '../breadcrumb';
+import Breadcrumb, { BreadcrumbProps } from '../breadcrumb';
 import TransButton from '../_util/transButton';
 import LocaleReceiver from '../locale-provider/LocaleReceiver';
 
@@ -59,7 +59,7 @@ const renderBreadcrumb = (breadcrumb: BreadcrumbProps) => {
 
 const renderHeader = (prefixCls: string, props: PageHeaderProps) => {
   const { breadcrumb, backIcon, onBack } = props;
-  if (breadcrumb && breadcrumb.routes && breadcrumb.routes.length >= 2) {
+  if (breadcrumb && breadcrumb.routes) {
     return renderBreadcrumb(breadcrumb);
   }
   return renderBack(prefixCls, backIcon, onBack);
@@ -70,7 +70,7 @@ const renderTitle = (prefixCls: string, props: PageHeaderProps) => {
   const titlePrefixCls = `${prefixCls}-title-view`;
   if (title || subTitle || tags || extra) {
     return (
-      <div className={`${prefixCls}-title-view`}>
+      <div className={titlePrefixCls}>
         {title && <span className={`${titlePrefixCls}-title`}>{title}</span>}
         {subTitle && <span className={`${titlePrefixCls}-sub-title`}>{subTitle}</span>}
         {tags && <span className={`${titlePrefixCls}-tags`}>{tags}</span>}

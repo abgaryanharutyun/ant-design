@@ -10,12 +10,13 @@ import { ConfigConsumer, ConfigConsumerProps } from '../config-provider';
 
 export interface DescriptionsItemProps {
   prefixCls?: string;
-  label: React.ReactNode;
-  children: JSX.Element;
+  label?: React.ReactNode;
+  children: React.ReactNode;
   span?: number;
 }
 
-const DescriptionsItem: React.SFC<DescriptionsItemProps> = ({ children }) => children;
+const DescriptionsItem: React.SFC<DescriptionsItemProps> = ({ children }) =>
+  children as JSX.Element;
 
 export interface DescriptionsProps {
   prefixCls?: string;
@@ -48,14 +49,15 @@ const generateChildrenRows = (
       totalRowSpan += 1;
     }
     if (totalRowSpan >= column) {
-      childrenArray.push(columnArray);
-      columnArray = [];
-      totalRowSpan = 0;
       warning(
-        totalRowSpan > column,
+        totalRowSpan <= column,
         'Descriptions',
         'Sum of column `span` in a line exceeds `column` of Descriptions.',
       );
+
+      childrenArray.push(columnArray);
+      columnArray = [];
+      totalRowSpan = 0;
     }
   });
   if (columnArray.length > 0) {
@@ -147,7 +149,7 @@ class Descriptions extends React.Component<
     size: 'default',
     column: defaultColumnMap,
   };
-  static Item: typeof DescriptionsItem;
+  static Item: typeof DescriptionsItem = DescriptionsItem;
   state: {
     screens: BreakpointMap;
   } = {
@@ -207,9 +209,12 @@ class Descriptions extends React.Component<
           const cloneChildren = React.Children.map(
             children,
             (child: React.ReactElement<DescriptionsItemProps>) => {
-              return React.cloneElement(child, {
-                prefixCls,
-              });
+              if (React.isValidElement(child)) {
+                return React.cloneElement(child, {
+                  prefixCls,
+                });
+              }
+              return child;
             },
           );
 
@@ -249,7 +254,5 @@ class Descriptions extends React.Component<
     );
   }
 }
-
-Descriptions.Item = DescriptionsItem;
 
 export default Descriptions;

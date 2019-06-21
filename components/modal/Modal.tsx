@@ -40,9 +40,9 @@ export interface ModalProps {
   /** 是否显示右上角的关闭按钮*/
   closable?: boolean;
   /** 点击确定回调*/
-  onOk?: (e: React.MouseEvent<any>) => void;
+  onOk?: (e: React.MouseEvent<HTMLElement>) => void;
   /** 点击模态框右上角叉、取消按钮、Props.maskClosable 值为 true 时的遮罩层或键盘按下 Esc 时的回调*/
-  onCancel?: (e: React.MouseEvent<any>) => void;
+  onCancel?: (e: React.MouseEvent<HTMLElement>) => void;
   afterClose?: () => void;
   /** 垂直居中 */
   centered?: boolean;
@@ -74,7 +74,7 @@ export interface ModalProps {
   maskStyle?: React.CSSProperties;
   mask?: boolean;
   keyboard?: boolean;
-  wrapProps?: any;
+  wrapProps?: unknown;
   prefixCls?: string;
 }
 
@@ -84,8 +84,9 @@ export interface ModalFuncProps {
   visible?: boolean;
   title?: React.ReactNode;
   content?: React.ReactNode;
-  onOk?: (...args: any[]) => any | PromiseLike<any>;
-  onCancel?: (...args: any[]) => any | PromiseLike<any>;
+  // TODO: find out exact types
+  onOk?: (...args: unknown[]) => unknown;
+  onCancel?: (...args: unknown[]) => unknown;
   okButtonProps?: NativeButtonProps;
   cancelButtonProps?: NativeButtonProps;
   centered?: boolean;
@@ -140,8 +141,6 @@ export default class Modal extends React.Component<ModalProps, {}> {
     confirmLoading: false,
     visible: false,
     okType: 'primary' as ButtonType,
-    okButtonDisabled: false,
-    cancelButtonDisabled: false,
   };
 
   static propTypes = {
@@ -192,13 +191,17 @@ export default class Modal extends React.Component<ModalProps, {}> {
     );
   };
 
-  renderModal = ({ getPrefixCls }: ConfigConsumerProps) => {
+  renderModal = ({
+    getPopupContainer: getContextPopupContainer,
+    getPrefixCls,
+  }: ConfigConsumerProps) => {
     const {
       prefixCls: customizePrefixCls,
       footer,
       visible,
       wrapClassName,
       centered,
+      getContainer,
       ...restProps
     } = this.props;
 
@@ -218,6 +221,7 @@ export default class Modal extends React.Component<ModalProps, {}> {
     return (
       <Dialog
         {...restProps}
+        getContainer={getContainer || getContextPopupContainer}
         prefixCls={prefixCls}
         wrapClassName={classNames({ [`${prefixCls}-centered`]: !!centered }, wrapClassName)}
         footer={footer === undefined ? defaultFooter : footer}

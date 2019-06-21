@@ -15,6 +15,88 @@ timeline: true
 
 ---
 
+## 3.19.6
+
+`2019-06-19`
+
+- 🐞 修复嵌套 Card `extra` 位置不正确的问题。[#17140](https://github.com/ant-design/ant-design/pull/17140)
+- 🐞 修复 Table 动态改变 `filter` 时报错的问题。[#17141](https://github.com/ant-design/ant-design/pull/17141)
+- 🐞 修复 TextArea 和 RangePicker 分隔符位置偏下和对齐的问题。[#17165](https://github.com/ant-design/ant-design/pull/17165)
+
+## 3.19.5
+
+`2019-06-17`
+
+- 🐞 修复 RangerPicker 输入框内容没有对齐的问题。[#17126](https://github.com/ant-design/ant-design/issues/17126)
+- 🐞 修复 ConfigProvider 的 `getPopupContainer` 对 Modal 无效的问题。[#17132](https://github.com/ant-design/ant-design/issues/17132)
+- TypeScript
+  - 🐞 修复 Descriptions.Item 的类型定义。[#17049](https://github.com/ant-design/ant-design/pull/17049)
+
+## 3.19.4
+
+`2019-06-16`
+
+- PageHeader
+  - 🐞 修复 `extra` 的一个元素边距问题。[#17025](https://github.com/ant-design/ant-design/issues/17025)
+  - 🐞 修复手型鼠标指针并不总是可点击的问题。[#17114](https://github.com/ant-design/ant-design/pull/17114)
+- 🐞 修复 Table 数据排序后不会回到第一页的问题。[#16978](https://github.com/ant-design/ant-design/issues/16978)
+- 🐞 修复 Menu 选项的子菜单选中并收起时没有高亮的问题。[#17039](https://github.com/ant-design/ant-design/pull/17039)
+- 🐞 修复 Tree 使用 `showLine` 时动画抖动的问题。[#17055](https://github.com/ant-design/ant-design/pull/17055)
+- 🐞 修复 Collapse 会出现多余滚动条的问题。[#17009](https://github.com/ant-design/ant-design/pull/17009) [#mtadams007](https://github.com/mtadams007)
+- 🐞 修复 DatePicker 阿拉伯语的时间格式。[#17092](https://github.com/ant-design/ant-design/pull/17092) [#3b3ziz](https://github.com/3b3ziz)
+- 🐞 修复 Input 与其他组件不对齐的问题。[#17082](https://github.com/ant-design/ant-design/issues/17082)
+- 💄 优化带边框 Table 的滚动条样式细节。[#17065](https://github.com/ant-design/ant-design/pull/17065)
+- 🌟 优化 Divider 实现方式以方便样式定制。[#17113](https://github.com/ant-design/ant-design/pull/17113)
+- 🇷🇺 新增部分俄语翻译。[#17108](https://github.com/ant-design/ant-design/pull/17108) [#Enfield1](https://github.com/Enfield1)
+- 🌟 新增 less 变量 [#17041](https://github.com/ant-design/ant-design/pull/17041) [#SamKirkland](https://github.com/SamKirkland)：
+  - `@comment-font-size-base`
+  - `@comment-font-size-sm`
+
+## 3.19.3
+
+`2019-06-06`
+
+- 📝 增加 DatePicker/RangePicker 指定 `mode` 后无法选择的文档说明。[#16984](https://github.com/ant-design/ant-design/pull/16984)
+- 🐞 修复 Breadcrumb 的 `validateDOMNesting` 警告信息。[#16929](https://github.com/ant-design/ant-design/pull/16929)
+- 🐞 修复 Breadcrumb 选中子路由时浏览器路径问题。[#16885](https://github.com/ant-design/ant-design/pull/16885) [@haianweifeng](https://github.com/haianweifeng)
+- 🐞 修复 InputNumber 设置 `number` 类型时会展示原生按钮的问题。[#16926](https://github.com/ant-design/ant-design/pull/16926)
+- 🐞 修复 Transfer 在自定义列表为空时展示 Empty 样式。[#16925](https://github.com/ant-design/ant-design/pull/16925)
+- 🐞 **修复 Table 头部多余的垂直滚动条样式。**[#16950](https://github.com/ant-design/ant-design/pull/16950)
+- 🐞 修复 Table 的 `rowSelection.getCheckboxProps()` 在没有返回值时报错的问题。[#15224](https://github.com/ant-design/ant-design/pull/15224)
+- 🐞 修复 Firefox 的 Table 丢失 `border-radius` 样式问题。[#16957](https://github.com/ant-design/ant-design/pull/16957)
+- 🐞 修复 Table 当 `title` 和 `rowSelection` 同时指定时在 Chrome 下滚动条异常的问题。[#16934](https://github.com/ant-design/ant-design/pull/16934)
+- 🐞 修复 Divider `orientation="center"` 时样式错位的问题。[#16988](https://github.com/ant-design/ant-design/pull/16988)
+- 🐞 修复 Cascader 搜索时不支持空格输入的问题。[#16918](https://github.com/ant-design/ant-design/pull/16918) [@Durisvk](https://github.com/Durisvk)
+- 🐞 修复部分组件的西班牙语言翻译。[#17002](https://github.com/ant-design/ant-design/pull/17002) [@morellan](https://github.com/morellan)
+- TypeScript
+  - 🐞 修复 Upload 的 `RcFile` 类型定义。[#16851](https://github.com/ant-design/ant-design/pull/16851)
+  - ⚡️ 导出 Typography 中 `TextProps` 的类型定义。[#17003](https://github.com/ant-design/ant-design/pull/17003) [@Jarvis1010](https://github.com/Jarvis1010)
+
+## 3.19.2
+
+`2019-06-01`
+
+- 🐞 修复 Tabs 在垂直卡片模式下标签不能滚动的问题。[#16825](https://github.com/ant-design/ant-design/pull/16825)
+- 🐞 修复 Transfer 组件在 unmount 时 `setState` 警告。[#16822](https://github.com/ant-design/ant-design/pull/16822) [@shiningjason](https://github.com/shiningjason)
+- 💄 使用 Less 变量 `@error-color`、`@warning-color` 代替 `@text-color-danger`、`@text-color-warning`。[#16890](https://github.com/ant-design/ant-design/pull/16890) [@MrHeer](https://github.com/MrHeer)
+- 💄 增加在 Sider 内 Menu 使用 `inlineCollapsed` 时的提示信息。[#16826](https://github.com/ant-design/ant-design/pull/16826)
+- TypeScript
+  - ⚡️ 增加 Menu 中 `forceSubMenuRender` 类型定义。[#16827](https://github.com/ant-design/ant-design/pull/16827)
+  - ⚡️ 导出 Typography 类型定义。[#16835](https://github.com/ant-design/ant-design/pull/16835)
+  - ⚡️ 增加 Steps 中的 `onChange` 类型定义。[#16845](https://github.com/ant-design/ant-design/pull/16845) [@JonathanLee-LX](https://github.com/JonathanLee-LX)
+  - ⚡️ 增加 Upload 中 `webkitRelativePath` 类型定义。[#16850](https://github.com/ant-design/ant-design/pull/16850) [@DiamondYuan](https://github.com/DiamondYuan)
+
+## 3.19.1
+
+`2019-05-27`
+
+- 🐞 修复 Menu 在受控模式下收起 Tooltip 不消失的问题。[#16812](https://github.com/ant-design/ant-design/pull/16812)
+- 🐞 修复 Descriptions 排列警告信息逻辑错误的问题。[#16819](https://github.com/ant-design/ant-design/pull/16819)
+- 🐞 修复图标 `canlendar` 和 `interation` 为正确的拼写 `calendar` 和 `interaction`。[#16818](https://github.com/ant-design/ant-design/pull/16818)
+- TypeScript
+  - ⚡️ 修复 Mentions 定义。[#16814](https://github.com/ant-design/ant-design/pull/16814)
+  - ⚡️ 完善 Select 中 `onSelect` 和 `onDeselect` 属性的定义。[#16817](https://github.com/ant-design/ant-design/pull/16817)
+
 ## 3.19.0
 
 `2019-05-26`
@@ -1211,7 +1293,6 @@ timeline: true
 - Tree 组件升级 `rc-tree` 到 `1.12.0`
   - 🌟 新增 `loadedKeys` 属性，用于设置已经加载的节点，需要配合 `loadData` 使用。[#10666](https://github.com/ant-design/ant-design/issues/10666)
   - 🌟 新增 `onLoad` 属性，作为节点加载完毕时的回调函数。[c488aca](https://github.com/ant-design/ant-design/commit/c488aca05e11d942d77c1b6bff45d12bbb1a2bd6)
-- 🌟 增加 `okButtonDisabled` and `cancelButtonDisabled` 属性用于禁用确定和取消按钮。[#10955](https://github.com/ant-design/ant-design/pull/10955)
 - 🌟 Cascader 新增 fieldNames 并废弃拼写错误的 filedNames。[#10896](https://github.com/ant-design/ant-design/issues/10896)
 - 🐞 修复时间轴不能与`Tooltip`一起使用的问题。[0e3b67e](https://github.com/ant-design/ant-design/commit/0e3b67e9999d867cc304f3be61a8a042a2ab92ee)
 - 🐞 修复当 Avatar 自定义大小时，圆角不改变的问题。[e1e6523](https://github.com/ant-design/ant-design/commit/e1e6523452286ba56f20b73abad762a58ea7d7bc)

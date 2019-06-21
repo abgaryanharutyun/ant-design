@@ -13,7 +13,7 @@ import FilterDropdownMenuWrapper from './FilterDropdownMenuWrapper';
 import { FilterMenuProps, FilterMenuState, ColumnProps, ColumnFilterItem } from './interface';
 import { generateValueMaps } from './util';
 
-function stopPropagation(e: React.SyntheticEvent<any>) {
+function stopPropagation(e: React.SyntheticEvent<unknown>) {
   e.stopPropagation();
   if (e.nativeEvent.stopImmediatePropagation) {
     e.nativeEvent.stopImmediatePropagation();
@@ -144,7 +144,9 @@ class FilterMenu<T> extends React.Component<FilterMenuProps<T>, FilterMenuState<
     if (!shallowequal(selectedKeys, this.props.selectedKeys)) {
       this.props.confirmFilter(
         this.props.column,
-        filterDropdown ? selectedKeys : selectedKeys.map(key => valueKeys[key]),
+        filterDropdown
+          ? selectedKeys
+          : selectedKeys.map(key => valueKeys[key]).filter(key => key !== undefined),
       );
     }
   }
